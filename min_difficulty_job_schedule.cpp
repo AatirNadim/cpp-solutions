@@ -9,7 +9,7 @@ class Solution {
 public:
     int minDifficulty(vector<int>& jobDifficulty, int d) {
         int n = jobDifficulty.size();
-        vector<vector<ll>> dp(d+1, vector<ll>(n));
+        vector<vector<ll>> dp(2, vector<ll>(n));
         int val = 0; dp[1][0] = jobDifficulty[0];
         for(int i=1;i<n;i++) {
             dp[1][i] = max(dp[1][i-1], (ll)jobDifficulty[i]);
@@ -19,12 +19,12 @@ public:
             for(int j=0;j<n;j++) {
                 ll maxval = jobDifficulty[j], res = INT_MAX;
                 for(int k=j-1;k>=0;k--) {
-                    res = min(res, maxval + dp[i-1][k]);
+                    res = min(res, maxval + dp[(i-1)&1][k]);
                     maxval = max(maxval, (ll)jobDifficulty[k]);
                 }
-                dp[i][j] = res;
+                dp[i&1][j] = res;
             }
         }
-        return (dp[d][n-1] == INT_MAX)?-1:(int)dp[d][n-1];
+        return (dp[d&1][n-1] == INT_MAX)?-1:(int)dp[d&1][n-1];
     }
 };
