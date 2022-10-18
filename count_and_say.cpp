@@ -21,4 +21,5 @@ int main() {
     while(n--) s = func(s);
     cout<<s<<endl;
     return 0;
+    
 }
