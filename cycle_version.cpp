@@ -17,7 +17,7 @@
 #include <vector>
 using namespace std;
 struct Point {
-    int x, y
+    int x, y;
 };
 int main (){
     cout<<"Give the three points"<<endl;
