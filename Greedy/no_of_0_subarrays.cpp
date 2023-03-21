@@ -1,6 +1,6 @@
 // problem link --> https://leetcode.com/problems/number-of-zero-filled-subarrays/
 
-
+// my solution link --> https://leetcode.com/problems/number-of-zero-filled-subarrays/discuss/3324134/C%2B%2B-oror-Math-oror-O(n)-time-O(1)-space-oror-Short-and-Simple
 
 #define ll long long int
 class Solution {
