@@ -18,3 +18,6 @@ adopting a somewhat wrong approach is entirely normal and does lead to extra slu
 there is sometimes no way to avoid it and the concern should be to work our way past this.
 
 always search for the focal point in case of swapping or moving the elements and the process is to be validated according to certain conditions. start updation of elements and subsequent validation from the focal point and halt in case of impossible condition or end of elements.
+
+always, always, always, type convert everything in the expression even if casting to a bigger data type. 
+type convert beforehand, ki baad me there is no issue regarding range limit.
