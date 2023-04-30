@@ -21,3 +21,5 @@ always search for the focal point in case of swapping or moving the elements and
 
 always, always, always, type convert everything in the expression even if casting to a bigger data type. 
 type convert beforehand, ki baad me there is no issue regarding range limit.
+
+dont always think in terms of node, try to think in terms of edges
