@@ -23,3 +23,7 @@ always, always, always, type convert everything in the expression even if castin
 type convert beforehand, ki baad me there is no issue regarding range limit.
 
 dont always think in terms of node, try to think in terms of edges
+
+for the priority_queue and sorting and especially for those two together, try to have different sorted arrangements if one does not work out
+
+try to think in terms of all the varying parameters
