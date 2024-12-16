@@ -1,5 +1,8 @@
 /*
     problem link --> https://leetcode.com/problems/sliding-window-maximum/
+
+    my solution link --> https://leetcode.com/problems/sliding-window-maximum/discuss/6153057/C%2B%2B-oror-Monotonic-Deque
+
 */
 
 class Solution {
@@ -29,6 +32,25 @@ public:
             } else if (nums[right] >= nums[maxidx]) maxidx = right; // new max element in the current window
             res.push_back(nums[maxidx]);
             left++, right++;
+        }
+        return res;
+    }
+};
+
+
+// More efficient approach
+
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> dq;
+        int n = nums.size();
+        vector<int> res;
+        for(int i = 0;i<n;i++) {
+            while(dq.size() and i - dq.front() >= k) dq.pop_front();
+            while(dq.size() and nums[dq.back()] <= nums[i]) dq.pop_back();
+            dq.push_back(i);
+            if(i >= k - 1) res.push_back(nums[dq.front()]);
         }
         return res;
     }
