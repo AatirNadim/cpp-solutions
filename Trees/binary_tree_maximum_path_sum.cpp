@@ -1,4 +1,5 @@
 // problem link --> https://leetcode.com/problems/binary-tree-maximum-path-sum/
+// problem link --> https://www.geeksforgeeks.org/problems/maximum-path-sum-from-any-node/1
 
 // my solution link --> https://leetcode.com/problems/binary-tree-maximum-path-sum/discuss/2901881/C%2B%2B-oror-DFS-oror-Recursion
 
