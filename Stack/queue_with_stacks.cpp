@@ -43,4 +43,28 @@ public:
  * int param_2 = obj->pop();
  * int param_3 = obj->peek();
  * bool param_4 = obj->empty();
- */`
+ */
+
+// another approach
+
+stack<int> s1, s2;
+void StackQueue :: push(int x)
+{
+    // Your Code
+    s1.push(x);
+}
+
+//Function to pop an element from queue by using 2 stacks.
+int StackQueue :: pop()
+{
+    // Your Code       
+    while(s1.size()) {
+        s2.push(s1.top()); s1.pop();
+    }
+    int res = s2.size() ? s2.top() : -1;
+    if(s2.size()) s2.pop();
+    while(s2.size()) {
+        s1.push(s2.top()); s2.pop();
+    }
+    return res;
+}
